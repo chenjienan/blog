@@ -8,7 +8,7 @@ subtitle:
 description:
 keywords:
 author: Terence Chen
-language:
+language: en
 timezone: America/Vancouver
 
 # URL
@@ -78,4 +78,7 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/chenjienan/blog
+  branch: master
+  message: "Site update: {{ now('YYYY-MM-DD HH:mm:ss') }}"

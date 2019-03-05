@@ -79,6 +79,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/chenjienan/blog
+  repo: https://github.com/chenjienan/chenjienan.github.io.git
   branch: master
   message: "Site update: {{ now('YYYY-MM-DD HH:mm:ss') }}"

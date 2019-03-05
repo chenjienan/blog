@@ -20,19 +20,15 @@ In this case, the issuing authority of the license placed a special "seal" into 
 
 This is the JWT variety of authentication. Once the DMV believes you are who you say (JWT version: autheticated, probably with password), it collects various data about you (JWT version: claims) and puts it on the license (JWT itself). When the license is issued, it is also watermarked with a seal (JWT version: digital signature) so that it can be examined for validity by people who know what to look for (JWT version: your API validates the JWT signature with a shared key). After that, the license (JWT) is trusted and the Date of Birth (claim) is assumed to be true.
 
-Home page: https://jwt.io/
+- [Home page](https://jwt.io/)
+- [Intro to JWT](https://jwt.io/introduction/)
+- [NuGet package for .NET](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)
+- [Angular package](https://github.com/auth0/angular2-jwt)
 
-Intro: https://jwt.io/introduction/
-
-NuGet package (4.0.4): https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/
-
-MS identity model documentation: https://docs.microsoft.com/en-us/dotnet/api/system.identitymodel.tokens.jwt?view=azure-dotnet
-
-Angular package: https://github.com/auth0/angular2-jwt
-
-backend C#　implementation:
+# backend C#　implementation:
 
 
+### Static jwt manager
 ``` C#
 // Static jwt manager
 // 3 methods
@@ -118,6 +114,7 @@ public static class JwtManager
 
 ```
 
+### MVC attribute (decorator)
 ``` C#
 // add MVC attribute to guard the routes
 public class JwtAuthenticationAttribute: Attribute, IAuthenticationFilter
@@ -204,10 +201,10 @@ public class JwtAuthenticationAttribute: Attribute, IAuthenticationFilter
             context.ChallengeWith("Bearer", parameter);
         }
     }
-
 ```
-detail implementation:　https://stackoverflow.com/questions/40281050/jwt-authentication-for-asp-net-web-api (make sure you go thru the comments)
+#### [stack overflow question](https://stackoverflow.com/questions/40281050/jwt-authentication-for-asp-net-web-api) (make sure you go thru the comments)
 
-more resources:
-https://blog.angular-university.io/angular-jwt-authentication/
-https://blog.angular-university.io/angular-jwt/ 
+
+#### more resources:
+- [JWT with angular](https://blog.angular-university.io/angular-jwt-authentication/)
+- [Good explanation](https://blog.angular-university.io/angular-jwt/)

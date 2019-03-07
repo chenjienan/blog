@@ -1,7 +1,7 @@
 ---
 title: JSON Web Token
 date: 2019-03-05 11:37:44
-tags:
+tags: work
 category: knowledge
 ---
 # Explain JWT like I'm five

@@ -8,7 +8,7 @@ category: knowledge
 ### Scenario 1: (Not JWT)
 
 I'm at a restaurant and I order a beer. This particular restaurant takes age verification very seriously. So the waiter asks to see my license. I provide it, but then he goes and gets a phone. He calls the DMV, waits on hold for a bit, and asks them to verify the license details. Once he talks to the licensing authority and they confirm my date of birth, then he goes and gets my beer.
-
+<!--more-->
 This is the old style of authentication, where you present your session cookie. When the server receives the session ID from the cookie, it turns around and calls the session service (or queries a database or memory) to find out if your ID is still good, and additional information that might be stored in that session.
 
 As you can see, this can become a bottleneck to service. And the restaurant probably won't stay in business long.

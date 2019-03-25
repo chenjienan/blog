@@ -9,3 +9,5 @@ message: Welcome to my blog, enter password to read.
 ---
 
 # Content
+
+Divide and Conquer
